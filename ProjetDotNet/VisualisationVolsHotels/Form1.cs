@@ -1,5 +1,4 @@
 ﻿using ProjetDotNet.libReservation;
-using ProjetDotNet.svcReservation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +17,7 @@ namespace VisualisationVolsHotels
         private clsResVol volCourant;
         private List<clsResHotel> hotels;
         private clsResHotel hotelCourant;
-        private Reservation resService;
+        private clsReservation resService;
         public Form1()
         {
             InitializeComponent();
@@ -80,7 +79,7 @@ namespace VisualisationVolsHotels
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.resService = new Reservation();
+            this.resService = new clsReservation();
             List<String> villes = resService.getVilles();
             for (int i = 0; i < villes.Count; i++)
             {

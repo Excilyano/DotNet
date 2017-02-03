@@ -114,7 +114,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 44);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 130);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
@@ -140,7 +140,7 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 192);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(820, 130);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
@@ -178,7 +178,7 @@
             this.volSelectionne.AutoSize = true;
             this.volSelectionne.Location = new System.Drawing.Point(120, 328);
             this.volSelectionne.Name = "volSelectionne";
-            this.volSelectionne.Size = new System.Drawing.Size(77, 13);
+            this.volSelectionne.Size = new System.Drawing.Size(0, 13);
             this.volSelectionne.TabIndex = 21;
             // 
             // hotelSelectionne
@@ -186,7 +186,7 @@
             this.hotelSelectionne.AutoSize = true;
             this.hotelSelectionne.Location = new System.Drawing.Point(120, 345);
             this.hotelSelectionne.Name = "hotelSelectionne";
-            this.hotelSelectionne.Size = new System.Drawing.Size(86, 13);
+            this.hotelSelectionne.Size = new System.Drawing.Size(0, 13);
             this.hotelSelectionne.TabIndex = 22;
             // 
             // Form1
