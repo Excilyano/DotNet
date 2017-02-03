@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.villesDepart = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.villesArrivee = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,13 +74,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Ville d\'arrivée";
             // 
-            // comboBox1
+            // villesArrivee
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(306, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.villesArrivee.FormattingEnabled = true;
+            this.villesArrivee.Location = new System.Drawing.Point(306, 10);
+            this.villesArrivee.Name = "villesArrivee";
+            this.villesArrivee.Size = new System.Drawing.Size(121, 21);
+            this.villesArrivee.TabIndex = 4;
             // 
             // button1
             // 
@@ -114,7 +114,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(504, 120);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
@@ -140,7 +140,7 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(16, 172);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(504, 97);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
@@ -202,12 +202,13 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.villesArrivee);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.villesDepart);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Réservations";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -222,7 +223,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox villesDepart;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox villesArrivee;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

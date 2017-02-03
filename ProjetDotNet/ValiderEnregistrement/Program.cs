@@ -16,7 +16,7 @@ namespace ValiderEnregistrement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1("A", "B"));
+            Application.Run(new Form1(null, null));
         }
     }
 }
