@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{913E90FF-FFFD-4500-AAD8-094320CBC8F8}"
 EndProject
@@ -14,6 +14,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualisationVolsHotels", "VisualisationVolsHotels\VisualisationVolsHotels.csproj", "{D68E7D47-9234-457E-BCCE-7AB60269FC88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValiderEnregistrement", "ValiderEnregistrement\ValiderEnregistrement.csproj", "{8654E62E-929F-4E92-BF79-1179A3861C53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libVol", "ClassLibrary1\libVol.csproj", "{A1B0FABA-BF5D-41AF-AC3D-E16AF51C19FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libHotel", "libHotel\libHotel.csproj", "{E969FAF0-2E5C-4A0F-8A28-39C42FE9EDE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libReservation", "libReservation\libReservation.csproj", "{1BBF6BA9-7823-425C-A0FF-63F155CF6E54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +34,18 @@ Global
 		{8654E62E-929F-4E92-BF79-1179A3861C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8654E62E-929F-4E92-BF79-1179A3861C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8654E62E-929F-4E92-BF79-1179A3861C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B0FABA-BF5D-41AF-AC3D-E16AF51C19FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B0FABA-BF5D-41AF-AC3D-E16AF51C19FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B0FABA-BF5D-41AF-AC3D-E16AF51C19FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B0FABA-BF5D-41AF-AC3D-E16AF51C19FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E969FAF0-2E5C-4A0F-8A28-39C42FE9EDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E969FAF0-2E5C-4A0F-8A28-39C42FE9EDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E969FAF0-2E5C-4A0F-8A28-39C42FE9EDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E969FAF0-2E5C-4A0F-8A28-39C42FE9EDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBF6BA9-7823-425C-A0FF-63F155CF6E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBF6BA9-7823-425C-A0FF-63F155CF6E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBF6BA9-7823-425C-A0FF-63F155CF6E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBF6BA9-7823-425C-A0FF-63F155CF6E54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +53,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D68E7D47-9234-457E-BCCE-7AB60269FC88} = {D979E5B5-790A-46AC-8007-8A86EE16A2FF}
 		{8654E62E-929F-4E92-BF79-1179A3861C53} = {D979E5B5-790A-46AC-8007-8A86EE16A2FF}
+		{A1B0FABA-BF5D-41AF-AC3D-E16AF51C19FC} = {8DB4BE87-A630-4772-A63C-3987C522A767}
+		{E969FAF0-2E5C-4A0F-8A28-39C42FE9EDE4} = {8DB4BE87-A630-4772-A63C-3987C522A767}
+		{1BBF6BA9-7823-425C-A0FF-63F155CF6E54} = {8DB4BE87-A630-4772-A63C-3987C522A767}
 	EndGlobalSection
 EndGlobal
