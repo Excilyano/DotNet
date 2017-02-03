@@ -37,13 +37,13 @@ namespace VisualisationVolsHotels
                 button = new Button() { Text = "Sélectionner", Name = this.vols[i-1].idVol.ToString() };
                 button.Click += new System.EventHandler(this.enregistrerVol);
                 tableLayoutPanel1.Controls.Add(button, 1, i);
-                tableLayoutPanel1.Controls.Add(new Label() { Text = this.vols[i-1].ToString(), Anchor = AnchorStyles.Left, Width = 400 }, 0, i);
+                tableLayoutPanel1.Controls.Add(new Label() { Text = this.vols[i-1].ToString(), Anchor = AnchorStyles.Left, Width = 738 }, 0, i);
             }
             for (int i = 1; i <= this.hotels.Count; i++) {
                 button = new Button() { Text = "Sélectionner", Name = this.hotels[i - 1].idHotel.ToString() };
                 button.Click += new System.EventHandler(this.enregistrerHotel);
                 tableLayoutPanel2.Controls.Add(button, 1, i);
-                tableLayoutPanel2.Controls.Add(new Label() { Text = this.hotels[i - 1].idHotel.ToString(), Anchor = AnchorStyles.Left, Width = 400 }, 0, i);
+                tableLayoutPanel2.Controls.Add(new Label() { Text = this.hotels[i - 1].ToString(), Anchor = AnchorStyles.Left, Width = 738 }, 0, i);
             }
         }
 

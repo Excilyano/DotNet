@@ -92,6 +92,12 @@ namespace ProjetDotNet.libReservation
         public string villeArrivee;
         public string date;
         public int idVol;
+
+        public override string ToString()
+        {
+            return "Vol n°" + idVol + " au départ de " + villeDepart
+                + " à destination de " + villeArrivee + ". Départ le " + date;
+        }
     }
 
     public class clsResHotel
@@ -99,5 +105,10 @@ namespace ProjetDotNet.libReservation
         public string ville;
         public string nom;
         public int idHotel;
+
+        public override string ToString()
+        {
+            return ville + ". Hôtel '" + nom + "'.";
+        }
     }
 }
