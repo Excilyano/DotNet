@@ -50,7 +50,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(464, 67);
+            this.groupBox1.Size = new System.Drawing.Size(706, 67);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Récapitulatif";
@@ -58,18 +58,20 @@
             // hotelSelectionne
             // 
             this.hotelSelectionne.AutoSize = true;
-            this.hotelSelectionne.Location = new System.Drawing.Point(126, 42);
+            this.hotelSelectionne.Location = new System.Drawing.Point(120, 42);
             this.hotelSelectionne.Name = "hotelSelectionne";
-            this.hotelSelectionne.Size = new System.Drawing.Size(0, 13);
+            this.hotelSelectionne.Size = new System.Drawing.Size(86, 13);
             this.hotelSelectionne.TabIndex = 3;
+            this.hotelSelectionne.Text = "hotelSelectionne";
             // 
             // volSelectionne
             // 
             this.volSelectionne.AutoSize = true;
-            this.volSelectionne.Location = new System.Drawing.Point(126, 20);
+            this.volSelectionne.Location = new System.Drawing.Point(120, 20);
             this.volSelectionne.Name = "volSelectionne";
-            this.volSelectionne.Size = new System.Drawing.Size(0, 13);
+            this.volSelectionne.Size = new System.Drawing.Size(77, 13);
             this.volSelectionne.TabIndex = 2;
+            this.volSelectionne.Text = "volSelectionne";
             // 
             // label2
             // 
@@ -101,7 +103,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 105);
+            this.label4.Location = new System.Drawing.Point(97, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 2;
@@ -110,7 +112,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 105);
+            this.label5.Location = new System.Drawing.Point(413, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 3;
@@ -118,7 +120,7 @@
             // 
             // nom
             // 
-            this.nom.Location = new System.Drawing.Point(57, 102);
+            this.nom.Location = new System.Drawing.Point(138, 105);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(183, 20);
             this.nom.TabIndex = 4;
@@ -126,7 +128,7 @@
             // 
             // prenom
             // 
-            this.prenom.Location = new System.Drawing.Point(301, 102);
+            this.prenom.Location = new System.Drawing.Point(468, 105);
             this.prenom.Name = "prenom";
             this.prenom.Size = new System.Drawing.Size(175, 20);
             this.prenom.TabIndex = 5;
@@ -135,9 +137,9 @@
             // valider
             // 
             this.valider.Enabled = false;
-            this.valider.Location = new System.Drawing.Point(16, 129);
+            this.valider.Location = new System.Drawing.Point(16, 135);
             this.valider.Name = "valider";
-            this.valider.Size = new System.Drawing.Size(460, 23);
+            this.valider.Size = new System.Drawing.Size(702, 23);
             this.valider.TabIndex = 6;
             this.valider.Text = "Valider l\'enregistrement";
             this.valider.UseVisualStyleBackColor = true;
@@ -147,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 160);
+            this.ClientSize = new System.Drawing.Size(730, 170);
             this.Controls.Add(this.valider);
             this.Controls.Add(this.prenom);
             this.Controls.Add(this.nom);
