@@ -41,7 +41,7 @@ namespace ProjetDotNet.libReservation
                 clsResHotel h = new clsResHotel();
                 h.ville = myDRC[i]["Ville"].ToString();
                 h.nom = myDRC[i]["Nom"].ToString();
-                h.idHotel = Convert.ToInt16(myDRC[i]["IdHotel"]);
+                h.idHotel = Convert.ToInt16(myDRC[i]["Id"]);
                 listResHotels.Add(h);
             }
 
@@ -60,7 +60,7 @@ namespace ProjetDotNet.libReservation
                 v.villeDepart = myDRC[i]["VilleDepart"].ToString();
                 v.villeArrivee = myDRC[i]["VilleArrivee"].ToString();
                 v.date = myDRC[i]["Date"].ToString();
-                v.idVol = Convert.ToInt16(myDRC[i]["IdVol"]);
+                v.idVol = Convert.ToInt16(myDRC[i]["Id"]);
                 listResVols.Add(v);
             }
 
