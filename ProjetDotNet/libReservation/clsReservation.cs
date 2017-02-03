@@ -67,6 +67,22 @@ namespace ProjetDotNet.libReservation
             return listResVols;
         }
 
+        public List<string> getVilles()
+        {
+            DataSet myDS = new DataSet();
+            List<string> listeVilles = new List<string>();
+            myDS = this.vol.liste_Villes();
+            DataRowCollection myDRC = myDS.Tables["liste_villes"].Rows;
+            for (int i = 0; i < myDRC.Count; i++)
+            {
+                string v;
+                v = myDRC[i]["Ville"].ToString();
+                listeVilles.Add(v);
+            }
+
+            return listeVilles;
+        }
+
     }
 
 

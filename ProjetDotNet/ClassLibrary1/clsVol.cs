@@ -54,5 +54,22 @@ namespace ProjetDotNet.libVol
             MyC.Close();
             return Res;
         }
+
+        public DataSet liste_Villes()
+        {
+            SqlConnection MyC = new SqlConnection();
+            MyC.ConnectionString = connectionStringVol;
+            MyC.Open();
+            SqlCommand MyCom = new SqlCommand("sp_getVilles", MyC);
+            MyCom.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter MyAdapt = new SqlDataAdapter();
+            DataSet myDS = new DataSet();
+            MyAdapt.SelectCommand = MyCom;
+            MyAdapt.Fill(myDS, "liste_villes");
+            MyAdapt.Dispose();
+            MyCom.Dispose();
+            MyC.Close();
+            return myDS;
+        }
     }
 }

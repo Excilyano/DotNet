@@ -31,5 +31,12 @@ namespace ProjetDotNet.svcReservation
             clsReservation res = new clsReservation();
             return res.getVols(villeDepart, villeArrivee);
         }
+
+        [WebMethod]
+        public List<string> getVilles()
+        {
+            clsReservation res = new clsReservation();
+            return res.getVilles();
+        }
     }
 }
