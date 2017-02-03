@@ -117,13 +117,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libReservation\libReservation.csproj">
-      <Project>{22599c11-01e9-4a35-af55-f00d6bec7dbf}</Project>
-      <Name>libReservation</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <ProjectReference Include="..\ClassLibrary1\libVol.csproj">
+      <Project>{a1b0faba-bf5d-41af-ac3d-e16af51c19fc}</Project>
+      <Name>libVol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libHotel\libHotel.csproj">
+      <Project>{e969faf0-2e5c-4a0f-8a28-39c42fe9ede4}</Project>
+      <Name>libHotel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
