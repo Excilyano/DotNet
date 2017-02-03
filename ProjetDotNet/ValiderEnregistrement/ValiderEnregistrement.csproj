@@ -79,6 +79,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libReservation\libReservation.csproj">
+      <Project>{22599c11-01e9-4a35-af55-f00d6bec7dbf}</Project>
+      <Name>libReservation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApplication1\svcReservation.csproj">
+      <Project>{d50f2931-f7b7-41bc-83a0-fdaa1a354721}</Project>
+      <Name>svcReservation</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

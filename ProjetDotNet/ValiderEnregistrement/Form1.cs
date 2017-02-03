@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetDotNet.libReservation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,15 @@ namespace ValiderEnregistrement
 {
     public partial class Form1 : Form
     {
-        public Form1(String vol, String hotel)
+        private clsResVol volCourant;
+        private clsResHotel hotelCourant;
+        public Form1(clsResVol vol, clsResHotel hotel)
         {
             InitializeComponent();
-            this.volSelectionne.Text = vol;
-            this.hotelSelectionne.Text = hotel;
+            this.volSelectionne.Text = vol.ToString();
+            this.hotelSelectionne.Text = hotel.ToString();
+            volCourant = vol;
+            hotelCourant = hotel;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

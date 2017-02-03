@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.villesDepart = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.villesArrivee = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,13 +74,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Ville d\'arrivée";
             // 
-            // comboBox1
+            // villesArrivee
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(306, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.villesArrivee.FormattingEnabled = true;
+            this.villesArrivee.Location = new System.Drawing.Point(306, 10);
+            this.villesArrivee.Name = "villesArrivee";
+            this.villesArrivee.Size = new System.Drawing.Size(121, 21);
+            this.villesArrivee.TabIndex = 4;
             // 
             // button1
             // 
@@ -95,9 +95,9 @@
             // button2
             // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(12, 327);
+            this.button2.Location = new System.Drawing.Point(12, 364);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(508, 23);
+            this.button2.Size = new System.Drawing.Size(820, 23);
             this.button2.TabIndex = 14;
             this.button2.Text = "Enregistrer";
             this.button2.UseVisualStyleBackColor = true;
@@ -108,14 +108,14 @@
             this.tableLayoutPanel1.AutoScroll = true;
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 738F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 37);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 44);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(504, 120);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 130);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
             // label3
@@ -134,14 +134,14 @@
             this.tableLayoutPanel2.AutoScroll = true;
             this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 738F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(16, 172);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 192);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(504, 97);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(820, 130);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
             // label4
@@ -158,7 +158,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 283);
+            this.label5.Location = new System.Drawing.Point(19, 328);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 13);
             this.label5.TabIndex = 19;
@@ -167,7 +167,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 300);
+            this.label6.Location = new System.Drawing.Point(19, 345);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 13);
             this.label6.TabIndex = 20;
@@ -193,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 368);
+            this.ClientSize = new System.Drawing.Size(844, 401);
             this.Controls.Add(this.hotelSelectionne);
             this.Controls.Add(this.volSelectionne);
             this.Controls.Add(this.label6);
@@ -202,12 +202,13 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.villesArrivee);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.villesDepart);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Réservations";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -222,7 +223,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox villesDepart;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox villesArrivee;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
