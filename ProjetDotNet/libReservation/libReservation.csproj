@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1BBF6BA9-7823-425C-A0FF-63F155CF6E54}</ProjectGuid>
+    <ProjectGuid>{22599C11-01E9-4A35-AF55-F00D6BEC7DBF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>libReservation</RootNamespace>
@@ -42,6 +42,16 @@
   <ItemGroup>
     <Compile Include="clsReservation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\libVol.csproj">
+      <Project>{a1b0faba-bf5d-41af-ac3d-e16af51c19fc}</Project>
+      <Name>libVol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libHotel\libHotel.csproj">
+      <Project>{e969faf0-2e5c-4a0f-8a28-39c42fe9ede4}</Project>
+      <Name>libHotel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

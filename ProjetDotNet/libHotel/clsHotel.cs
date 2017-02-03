@@ -10,6 +10,9 @@ namespace ProjetDotNet.libHotel
 {
     public class clsHotel
     {
+
+        private string connectionStringHotel = "Data Source=(local);Initial Catalog=Hotels ;Integrated Security=True";
+
         public clsHotel()
         {
         }
@@ -17,7 +20,7 @@ namespace ProjetDotNet.libHotel
         public DataSet liste_Hotels(string ville)
         {
             SqlConnection MyC = new SqlConnection();
-            MyC.ConnectionString = "Data Source=(local);Initial Catalog=Hotels ;Integrated Security=True";
+            MyC.ConnectionString = connectionStringHotel;
             MyC.Open();
             SqlCommand MyCom = new SqlCommand("sp_getHotels", MyC);
             MyCom.CommandType = CommandType.StoredProcedure;
@@ -31,6 +34,25 @@ namespace ProjetDotNet.libHotel
             MyCom.Dispose();
             MyC.Close();
             return myDS;
+        }
+
+        public int reservationHotel(string nom, string prenom, int idHotel)
+        {
+            SqlConnection MyC = new SqlConnection();
+            MyC.ConnectionString = connectionStringHotel;
+            MyC.Open();
+            SqlCommand MyCom = new SqlCommand("sp_reserverHotel", MyC);
+            MyCom.CommandType = CommandType.StoredProcedure;
+            MyCom.Parameters.Add("@Nom", SqlDbType.NChar);
+            MyCom.Parameters["@Nom"].Value = nom;
+            MyCom.Parameters.Add("@Prenom", SqlDbType.NChar);
+            MyCom.Parameters["@Prenom"].Value = prenom;
+            MyCom.Parameters.Add("@IdHotel", SqlDbType.Int);
+            MyCom.Parameters["@IdHotel"].Value = idHotel;
+            int Res = Convert.ToInt32(MyCom.ExecuteScalar());
+            MyCom.Dispose();
+            MyC.Close();
+            return Res;
         }
     }
 }
