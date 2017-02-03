@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using ProjetDotNet.libHotel;
 using ProjetDotNet.libVol;
 using System.Data;
+using ProjetDotNet.svcReservation;
+using System.Web.Services;
+
 
 namespace ProjetDotNet.libReservation
 {
@@ -20,14 +23,14 @@ namespace ProjetDotNet.libReservation
             this.hotel = new clsHotel();
             this.vol = new clsVol();
         }
-
+        
         public List<clsResHotel> getHotels(string ville)
         {
-            DataSet myDS = new DataSet();
+            svcReservation.Reservation myRes = new Reservation();
+            DataSet myDS = myRes.getHotels(ville);
             List<clsResHotel> listResHotels = new List<clsResHotel>();
-            myDS = this.hotel.liste_Hotels(ville);
             DataRowCollection myDRC = myDS.Tables["liste_hotels"].Rows;
-            for (int i=0; i < myDRC.Count; i++)
+            for (int i = 0; i < myDRC.Count; i++)
             {
                 clsResHotel h = new clsResHotel();
                 h.ville = myDRC[i]["Ville"].ToString();
@@ -38,12 +41,12 @@ namespace ProjetDotNet.libReservation
 
             return listResHotels;
         }
-
+        
         public List<clsResVol> getVols(string villeDepart, string villeArrivee)
         {
-            DataSet myDS = new DataSet();
+            svcReservation.Reservation myRes = new Reservation();
+            DataSet myDS = myRes.getVols(villeDepart, villeArrivee);
             List<clsResVol> listResVols = new List<clsResVol>();
-            myDS = this.vol.liste_Vols(villeDepart, villeArrivee);
             DataRowCollection myDRC = myDS.Tables["liste_vols"].Rows;
             for (int i = 0; i < myDRC.Count; i++)
             {
@@ -57,12 +60,12 @@ namespace ProjetDotNet.libReservation
 
             return listResVols;
         }
-
+        
         public List<string> getVilles()
         {
-            DataSet myDS = new DataSet();
+            svcReservation.Reservation myRes = new Reservation();
+            DataSet myDS = myRes.getVilles();
             List<string> listeVilles = new List<string>();
-            myDS = this.vol.liste_Villes();
             DataRowCollection myDRC = myDS.Tables["liste_villes"].Rows;
             for (int i = 0; i < myDRC.Count; i++)
             {

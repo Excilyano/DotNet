@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
-using ProjetDotNet.libReservation;
+using ProjetDotNet.libVol;
+using ProjetDotNet.libHotel;
 
 namespace ProjetDotNet.svcReservation
 {
@@ -17,26 +19,34 @@ namespace ProjetDotNet.svcReservation
     // [System.Web.Script.Services.ScriptService]
     public class Reservation : System.Web.Services.WebService
     {
-
         [WebMethod]
-        public List<clsResHotel> getHotels (string ville)
+        public DataSet getHotels(string ville)
         {
-            clsReservation res = new clsReservation();
-            return res.getHotels(ville);            
+            clsHotel hotel = new clsHotel();
+            DataSet myDS = new DataSet();
+            myDS = hotel.liste_Hotels(ville);
+
+            return myDS;
         }
 
         [WebMethod]
-        public List<clsResVol> getVols(string villeDepart, string villeArrivee)
+        public DataSet getVols(string villeDepart, string villeArrivee)
         {
-            clsReservation res = new clsReservation();
-            return res.getVols(villeDepart, villeArrivee);
+            clsVol vol = new clsVol();
+            DataSet myDS = new DataSet();
+            myDS = vol.liste_Vols(villeDepart, villeArrivee);
+
+            return myDS;
         }
 
         [WebMethod]
-        public List<string> getVilles()
+        public DataSet getVilles()
         {
-            clsReservation res = new clsReservation();
-            return res.getVilles();
+            clsVol vol = new clsVol();
+            DataSet myDS = new DataSet();
+            myDS = vol.liste_Villes();
+
+            return myDS;
         }
     }
 }
