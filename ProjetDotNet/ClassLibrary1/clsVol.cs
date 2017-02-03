@@ -9,7 +9,7 @@ namespace ProjetDotNet.libVol
 {
     public class clsVol
     {
-        private string connectionStringVol = "Data Source=(local);Initial Catalog=Vols ;Integrated Security=True";
+        private string connectionStringVol = "Data Source=LAPTOP-HHTO2271\\SQLEXPRESS;Initial Catalog=Vols;Integrated Security=True";
 
         public clsVol()
         {

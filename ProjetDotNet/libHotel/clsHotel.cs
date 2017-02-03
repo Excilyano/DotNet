@@ -11,8 +11,7 @@ namespace ProjetDotNet.libHotel
     public class clsHotel
     {
 
-        private string connectionStringHotel = "Data Source=(local);Initial Catalog=Hotels ;Integrated Security=True";
-
+        private string connectionStringHotel = "Data Source=LAPTOP-HHTO2271\\SQLEXPRESS;Initial Catalog=Hotels;Integrated Security=True";
         public clsHotel()
         {
         }
