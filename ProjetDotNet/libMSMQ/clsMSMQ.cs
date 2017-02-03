@@ -15,9 +15,9 @@ namespace ProjetDotNet.libMSMQ
             MyMQ.Formatter = new XmlMessageFormatter(new Type[] { typeof(ReservationInfo) });
             ReservationInfo ResInfo = new ReservationInfo();
             ResInfo = (ReservationInfo)MyMQ.Peek().Body;
+
             MyMQ.Receive();
-            int b = 0;
-            int a = 10 / b;
+
             MyMQ.Close();
             return ResInfo;
         }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{913E90FF-FFFD-4500-AAD8-094320CBC8F8}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libMSMQ", "libMSMQ\libMSMQ.csproj", "{CEE2613B-87C6-4D76-9523-5668F04B359B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libReservationMSMQ", "libReservationMSMQ\libReservationMSMQ.csproj", "{1C770927-AB00-451D-9A44-AA93A891D0CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "svcTraiterMSMQ", "svcTraiterMSMQ\svcTraiterMSMQ.csproj", "{6DB8B5BF-55C9-422D-A66E-33979EB3FB89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{1C770927-AB00-451D-9A44-AA93A891D0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C770927-AB00-451D-9A44-AA93A891D0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C770927-AB00-451D-9A44-AA93A891D0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB8B5BF-55C9-422D-A66E-33979EB3FB89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB8B5BF-55C9-422D-A66E-33979EB3FB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB8B5BF-55C9-422D-A66E-33979EB3FB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB8B5BF-55C9-422D-A66E-33979EB3FB89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,5 +84,6 @@ Global
 		{22599C11-01E9-4A35-AF55-F00D6BEC7DBF} = {913E90FF-FFFD-4500-AAD8-094320CBC8F8}
 		{CEE2613B-87C6-4D76-9523-5668F04B359B} = {8DB4BE87-A630-4772-A63C-3987C522A767}
 		{1C770927-AB00-451D-9A44-AA93A891D0CD} = {913E90FF-FFFD-4500-AAD8-094320CBC8F8}
+		{6DB8B5BF-55C9-422D-A66E-33979EB3FB89} = {16E4AD56-1AE7-4295-9098-0CA41CE7E694}
 	EndGlobalSection
 EndGlobal
