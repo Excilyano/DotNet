@@ -21,15 +21,6 @@ namespace ProjetDotNet.libReservation
             this.vol = new clsVol();
         }
 
-        public bool reservation(string nom, string prenom, string nomHotel, int idHotel, int idVol)
-        {
-            bool success = false;
-            int resHotel = hotel.reservationHotel(nom, prenom, idHotel);
-            int resVol = vol.reservationVol(nom, prenom, idVol);
-            success = true;
-            return success;
-        }
-
         public List<clsResHotel> getHotels(string ville)
         {
             DataSet myDS = new DataSet();
