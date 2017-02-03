@@ -20,9 +20,10 @@ namespace svcTraiterMSMQ
 
         protected override void OnStart(string[] args)
         {
-            clsReservationMSMQ myReservation = new clsReservationMSMQ();
+            
             while (true)
             {
+                clsReservationMSMQ myReservation = new clsReservationMSMQ();
                 myReservation.ReservationMSMQ();
             }
             

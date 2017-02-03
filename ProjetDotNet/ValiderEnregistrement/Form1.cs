@@ -45,7 +45,6 @@ namespace ValiderEnregistrement
             MyMQ.Close();
             this.msgInfo.ForeColor = System.Drawing.Color.Green;
             msgInfo.Text = "Le traitement a bien été placé dans la file.";
-            this.Close();
         }
     }
 }

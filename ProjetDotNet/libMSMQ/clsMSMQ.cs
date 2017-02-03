@@ -11,7 +11,7 @@ namespace ProjetDotNet.libMSMQ
     {
         public ReservationInfo LireMSMQ()
         {
-            MessageQueue MyMQ = new MessageQueue(@".\private$\TEST");
+            MessageQueue MyMQ = new MessageQueue(@".\private$\ResaVolsHotels");
             MyMQ.Formatter = new XmlMessageFormatter(new Type[] { typeof(ReservationInfo) });
             ReservationInfo ResInfo = new ReservationInfo();
             ResInfo = (ReservationInfo)MyMQ.Peek().Body;
