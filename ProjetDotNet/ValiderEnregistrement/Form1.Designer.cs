@@ -39,6 +39,7 @@
             this.nom = new System.Windows.Forms.TextBox();
             this.prenom = new System.Windows.Forms.TextBox();
             this.valider = new System.Windows.Forms.Button();
+            this.msgInfo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 108);
+            this.label4.Location = new System.Drawing.Point(97, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 2;
@@ -112,7 +113,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(413, 108);
+            this.label5.Location = new System.Drawing.Point(413, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 3;
@@ -120,7 +121,7 @@
             // 
             // nom
             // 
-            this.nom.Location = new System.Drawing.Point(138, 105);
+            this.nom.Location = new System.Drawing.Point(138, 107);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(183, 20);
             this.nom.TabIndex = 4;
@@ -128,7 +129,7 @@
             // 
             // prenom
             // 
-            this.prenom.Location = new System.Drawing.Point(468, 105);
+            this.prenom.Location = new System.Drawing.Point(468, 107);
             this.prenom.Name = "prenom";
             this.prenom.Size = new System.Drawing.Size(175, 20);
             this.prenom.TabIndex = 5;
@@ -137,7 +138,7 @@
             // valider
             // 
             this.valider.Enabled = false;
-            this.valider.Location = new System.Drawing.Point(16, 135);
+            this.valider.Location = new System.Drawing.Point(16, 168);
             this.valider.Name = "valider";
             this.valider.Size = new System.Drawing.Size(702, 23);
             this.valider.TabIndex = 6;
@@ -145,11 +146,20 @@
             this.valider.UseVisualStyleBackColor = true;
             this.valider.Click += new System.EventHandler(this.valider_Click);
             // 
+            // msgInfo
+            // 
+            this.msgInfo.AutoSize = true;
+            this.msgInfo.Location = new System.Drawing.Point(35, 136);
+            this.msgInfo.Name = "msgInfo";
+            this.msgInfo.Size = new System.Drawing.Size(0, 13);
+            this.msgInfo.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 170);
+            this.ClientSize = new System.Drawing.Size(730, 203);
+            this.Controls.Add(this.msgInfo);
             this.Controls.Add(this.valider);
             this.Controls.Add(this.prenom);
             this.Controls.Add(this.nom);
@@ -179,6 +189,7 @@
         private System.Windows.Forms.TextBox nom;
         private System.Windows.Forms.TextBox prenom;
         private System.Windows.Forms.Button valider;
+        private System.Windows.Forms.Label msgInfo;
     }
 }
 

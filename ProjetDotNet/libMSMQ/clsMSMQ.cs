@@ -27,7 +27,6 @@ namespace ProjetDotNet.libMSMQ
     {
         public string nom { get; set; }
         public string prenom { get; set; }
-        public string nomHotel { get; set; }
         public int idHotel { get; set; }
         public int idVol { get; set; }
     }

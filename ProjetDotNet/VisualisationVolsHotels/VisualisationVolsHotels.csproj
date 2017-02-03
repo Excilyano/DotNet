@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -88,10 +87,6 @@
     <ProjectReference Include="..\ValiderEnregistrement\ValiderEnregistrement.csproj">
       <Project>{8654e62e-929f-4e92-bf79-1179a3861c53}</Project>
       <Name>ValiderEnregistrement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebApplication1\svcReservation.csproj">
-      <Project>{d50f2931-f7b7-41bc-83a0-fdaa1a354721}</Project>
-      <Name>svcReservation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
