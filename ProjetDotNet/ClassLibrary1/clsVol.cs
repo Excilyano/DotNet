@@ -4,15 +4,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace ProjetDotNet.libVol
 {
     public class clsVol
     {
-        private string connectionStringVol = "Data Source=LAPTOP-HHTO2271\\SQLEXPRESS;Initial Catalog=Vols;Integrated Security=True";
+        private string connectionStringVol = "Data Source=laptop-hhto2271\\sqlexpress;Initial Catalog=Vols;User ID=sa;Password=password";
+        private SqlTransaction myTransaction;
+        private SqlConnection MyC;
+        private SqlCommand MyCom;
 
         public clsVol()
         {
+            this.myTransaction = null;
+            this.MyC = null;
+            this.MyCom = null;
         }
 
         public DataSet liste_Vols(string depart, string arrivee)
@@ -38,21 +45,34 @@ namespace ProjetDotNet.libVol
 
         public int reservationVol(string nom, string prenom, int idVol)
         {
-            SqlConnection MyC = new SqlConnection();
-            MyC.ConnectionString = connectionStringVol;
-            MyC.Open();
-            SqlCommand MyCom = new SqlCommand("sp_reserverVol", MyC);
-            MyCom.CommandType = CommandType.StoredProcedure;
-            MyCom.Parameters.Add("@Nom", SqlDbType.NChar);
-            MyCom.Parameters["@Nom"].Value = nom;
-            MyCom.Parameters.Add("@Prenom", SqlDbType.NChar);
-            MyCom.Parameters["@Prenom"].Value = prenom;
-            MyCom.Parameters.Add("@IdVol", SqlDbType.Int);
-            MyCom.Parameters["@IdVol"].Value = idVol;
-            int Res = Convert.ToInt32(MyCom.ExecuteScalar());
-            MyCom.Dispose();
-            MyC.Close();
-            return Res;
+            int res = -1;
+
+            try
+            {
+                MyC = new SqlConnection();
+                MyC.ConnectionString = connectionStringVol;
+                MyC.Open();
+                myTransaction = MyC.BeginTransaction();
+
+                MyCom = new SqlCommand("sp_reserverVol", MyC);
+                MyCom.Transaction = myTransaction;
+                MyCom.CommandType = CommandType.StoredProcedure;
+                MyCom.Parameters.Add("@Nom", SqlDbType.NChar);
+                MyCom.Parameters["@Nom"].Value = nom;
+                MyCom.Parameters.Add("@Prenom", SqlDbType.NChar);
+                MyCom.Parameters["@Prenom"].Value = prenom;
+                MyCom.Parameters.Add("@IdVol", SqlDbType.Int);
+                MyCom.Parameters["@IdVol"].Value = idVol;
+
+                MyCom.ExecuteNonQuery();
+
+                res = 0;
+            }catch(Exception e)
+            {
+            }
+
+            return res;
+
         }
 
         public DataSet liste_Villes()
@@ -70,6 +90,24 @@ namespace ProjetDotNet.libVol
             MyCom.Dispose();
             MyC.Close();
             return myDS;
+        }
+
+        public void commit()
+        {
+                this.myTransaction.Commit();
+                endTransaction();
+        }
+
+        public void rollback()
+        {
+            this.myTransaction.Rollback();
+            endTransaction();
+        }
+
+        public void endTransaction()
+        {
+            this.MyCom.Dispose();
+            this.MyC.Close();
         }
     }
 }

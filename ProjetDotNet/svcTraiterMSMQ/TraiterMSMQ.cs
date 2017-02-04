@@ -8,6 +8,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 using ProjetDotNet.libReservationMSMQ;
+using System.IO;
 
 namespace svcTraiterMSMQ
 {
@@ -20,17 +21,24 @@ namespace svcTraiterMSMQ
 
         protected override void OnStart(string[] args)
         {
-            
-            while (true)
-            {
-                clsReservationMSMQ myReservation = new clsReservationMSMQ();
-                myReservation.ReservationMSMQ();
-            }
-            
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 2000; // 2 seconds  
+            timer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
+            timer.Start();
+
         }
 
         protected override void OnStop()
         {
         }
+
+        public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
+        {
+            clsReservationMSMQ myReservation = new clsReservationMSMQ();
+            myReservation.ReservationMSMQ();
+        }
+
+
+
     }
 }
