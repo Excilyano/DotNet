@@ -85,6 +85,10 @@
       <Project>{cee2613b-87c6-4d76-9523-5668f04b359b}</Project>
       <Name>libMSMQ</Name>
     </ProjectReference>
+    <ProjectReference Include="..\libReservationMSMQ\libReservationMSMQ.csproj">
+      <Project>{1c770927-ab00-451d-9a44-aa93a891d0cd}</Project>
+      <Name>libReservationMSMQ</Name>
+    </ProjectReference>
     <ProjectReference Include="..\libReservation\libReservation.csproj">
       <Project>{22599c11-01e9-4a35-af55-f00d6bec7dbf}</Project>
       <Name>libReservation</Name>

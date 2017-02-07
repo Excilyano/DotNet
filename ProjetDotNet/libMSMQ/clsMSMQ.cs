@@ -46,6 +46,7 @@ namespace ProjetDotNet.libMSMQ
         {
             MyMQ.Close();
         }
+
     }
 
 

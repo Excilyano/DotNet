@@ -8,6 +8,7 @@ using ProjetDotNet.libMSMQ;
 using ProjetDotNet.libHotel;
 using ProjetDotNet.libVol;
 using System.IO;
+using System.Messaging;
 
 namespace ProjetDotNet.libReservationMSMQ
 {
@@ -49,6 +50,18 @@ namespace ProjetDotNet.libReservationMSMQ
             myMSMQ.close();
             success = true;
             return success;
+        }
+
+        public void putInMSMQQueue(int idHotel, int idVol, string nom, string prenom)
+        {
+            ReservationInfo resService = new ReservationInfo();
+            resService.idHotel = idHotel;
+            resService.idVol = idVol;
+            resService.prenom = prenom;
+            resService.nom = nom;
+            MessageQueue MyMQ = new MessageQueue(@".\private$\ResaVolsHotels");
+            MyMQ.Send(resService, "EnregistrementVolsHotels");
+            MyMQ.Close();
         }
 
     }
